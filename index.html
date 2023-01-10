@@ -5,14 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tangsa&display=swap" rel="stylesheet"
+    rel="stylesheet" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+    <header>Weather Dashboard</header>
 
-
-
-
-    
-    
+    <main>
+    <div class="card" style="width: 12rem;">
+        <div class="card-body">
+        <form action="/action_page.php">
+            <label for="sCity">Search for a City:</label><br>
+            <input type="text" id="city" name="city" value="" placeholder="Toronto">
+            <br>
+            <input type="button" class="button" value="Search">
+        </form>
+            <!-- <a href="#"> -->
+            <!-- </a> -->
+        </div>
+      </div>
+  
+      <div class="card-city-result" style="width: 35rem;">
+        <h1 id="city-result">Altanta (9/13/2022)</h1> <!-- placehloder> -->
+        <p>Temp:</p>
+        <p>Wind:</p>
+        <p>Humidity:</p>
+</div>
+      </main>
 </body>
 </html>
+
