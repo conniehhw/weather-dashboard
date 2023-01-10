@@ -7,33 +7,43 @@
     <title>Weather Dashboard</title>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tangsa&display=swap" rel="stylesheet"
     rel="stylesheet" /> -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 
 <body>
     <header>Weather Dashboard</header>
 
-    <main>
+    <section>
     <div class="card" style="width: 12rem;">
         <div class="card-body">
         <form action="/action_page.php">
             <label for="sCity">Search for a City:</label><br>
             <input type="text" id="city" name="city" value="" placeholder="Toronto">
             <br>
-            <input type="button" class="button" value="Search">
+            <input type="button" class="button" id="search-button" value="Search">
         </form>
             <!-- <a href="#"> -->
             <!-- </a> -->
         </div>
       </div>
-  
       <div class="card-city-result" style="width: 35rem;">
-        <h1 id="city-result">Altanta (9/13/2022)</h1> <!-- placehloder> -->
+        <ul class="col-8 mb-3"></ul>
+      <!-- <h1 id="city-name">Altanta (9/13/2022)</h1>
         <p>Temp:</p>
         <p>Wind:</p>
-        <p>Humidity:</p>
+        <p>Humidity:</p> -->
 </div>
-      </main>
+</section>
+<section>
+    <div class="history" id="search-history">
+        test me out
+    </div>
+    <div id="forecast" style="width: 25rem;">
+        5 day forecast
+    </div>
+    
+</section>
+<script src="./js/script.js"></script>
 </body>
 </html>
 
