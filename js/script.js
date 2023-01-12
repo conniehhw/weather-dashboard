@@ -15,10 +15,13 @@
 // function getApi() {
   // replace `octocat` with anyone else's GitHub username
 //   var requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?';
-  var requestUrl = 
   
-  
-  'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=dbc89065a7085f3e04b8795339fe050e';
+var resultContainer = document.getElementById('city-result');
+var searchButton = document.getElementById('search-button');
+
+function getApi() {
+
+var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=dbc89065a7085f3e04b8795339fe050e';
 
   fetch(requestUrl)
     .then(function (response) {
@@ -26,6 +29,19 @@
     })
     .then(function (data)  {
     console.log(data);  
+
+    var cityName = document.createElement('p');
+    var cityTemp = document.createElement('p');
+    var weatherDescription = document.createElement('p');
+
+    cityName.textContent = data.name;
+    cityTemp.textContent = data.main.temp;
+    weatherDescription.textContent = data.wind.speed;
+
+      resultContainer.append(cityName);
+      resultContainer.append(cityTemp);
+      resultContainer.append(weatherDescription);
+    
 //     {
 //       for (var i = 0; i < data.length; i++) {
 //         var listItem = document.createElement('li');
@@ -35,6 +51,6 @@
 //     }
 // });
 });
-    
+}
 
-// searchButton.addEventListener('click', getApi);
+searchButton.addEventListener('click', getApi);
