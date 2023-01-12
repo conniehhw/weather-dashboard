@@ -30,17 +30,27 @@ var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=
     .then(function (data)  {
     console.log(data);  
 
-    var cityName = document.createElement('p');
-    var cityTemp = document.createElement('p');
-    var weatherDescription = document.createElement('p');
+    var cityName = document.createElement('h1'); //addClass / set Attribute to style to bold?
+
+    var tempContentEl = document.createElement('p');
+    tempContentEl.innerHTML =
+      '<strong>Temp:</strong> ' + data.main.temp;
+
+    var windContentEl = document.createElement('p');
+    windContentEl.innerHTML =
+      '<strong>Wind Speed:</strong> ' + data.wind.speed;
 
     cityName.textContent = data.name;
-    cityTemp.textContent = data.main.temp;
-    weatherDescription.textContent = data.wind.speed;
+    // cityTemp.textContent = data.main.temp;
+    // weatherDescription.textContent = data.wind.speed;
+
+      // resultContainer.append(cityName);
+      // resultContainer.append(cityTemp);
+      // resultContainer.append(weatherDescription);
 
       resultContainer.append(cityName);
-      resultContainer.append(cityTemp);
-      resultContainer.append(weatherDescription);
+      resultContainer.append(tempContentEl);
+      resultContainer.append(windContentEl);
     
 //     {
 //       for (var i = 0; i < data.length; i++) {
