@@ -19,9 +19,11 @@
 var resultContainer = document.getElementById('city-result');
 var searchButton = document.getElementById('search-button');
 
+searchButton.addEventListener('click', getApi);
+
 function getApi() {
 
-var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=dbc89065a7085f3e04b8795339fe050e';
+var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=dbc89065a7085f3e04b8795339fe050e&units=imperial';
 
   fetch(requestUrl)
     .then(function (response) {
@@ -69,6 +71,8 @@ var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=
       resultContainer.append(windContentEl);
       resultContainer.append(humidityContentEl);
     
+});
+}
 //     {
 //       for (var i = 0; i < data.length; i++) {
 //         var listItem = document.createElement('li');
@@ -77,7 +81,22 @@ var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=
 //       }
 //     }
 // });
-});
-}
 
+//////////////// API call for 5 day forecast
+var resultContainer = document.getElementById('forecast');
 searchButton.addEventListener('click', getApi);
+
+function getApi() {
+
+var requestFiveDayUrl =
+'https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&cnt=40&appid=9f768ebe1fd823ba79ca13f691dcc877&units=imperial';
+
+
+  fetch(requestFiveDayUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data)  {
+    console.log(data);  
+    });
+  }

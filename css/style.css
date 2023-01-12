@@ -47,7 +47,7 @@ input[type=text], select {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid red;
     margin-top: 10px;
 
   }
@@ -60,4 +60,20 @@ input[type=text], select {
 
 p {
     font-size: 10px;
+}
+
+.five-day-forecast {
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid green;
+  display: flex;
+  width: 1000px;
+  /* border-radius: 4px; */
+}
+
+.daily {
+  height: 150px;
+  width: 200px;
+margin-top: 50px;
+display: flex;
 }
