@@ -1,7 +1,7 @@
 
 // logic getting city 5 day weather & outputting request
 var resultContainer = document.querySelector('#city-result'); //same as line 7 & 8
-var searchButton = document.querySelector('#search-form-1');
+var searchFormEl = document.querySelector('#search-form-1');
 
 
 // var query = searchParamsArr[0].split('=').pop(); // user input
@@ -116,7 +116,7 @@ function searchApi(query) {
     searchApi(searchInputVal);
   }
 
-  searchButton.addEventListener('click', handleSearchFormSubmit); 
+  searchFormEl.addEventListener('submit', handleSearchFormSubmit); 
 
   // getParams();
 

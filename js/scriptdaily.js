@@ -1,7 +1,8 @@
 
 // api 5 day weather forecast in daily box
 var resultContainer1 = document.querySelector('#daily'); //display query results
-var searchFormEl = document.querySelector('#search-form'); //search button for click
+var searchButton = document.querySelector('#search-form-1'); //search button for click
+//searchFormEl / #search-form
 
 function printResults(data) {
     console.log(data); 
@@ -65,7 +66,7 @@ function searchApi1(query) {
 function handleSearchFormSubmit(event) {
     event.preventDefault();
     
-    var searchInputVal = document.querySelector('#search-input-1').value;
+    var searchInputVal = document.querySelector('#search-input').value;
       
     if (!searchInputVal) {
         console.error('You need a search input value!');
@@ -75,7 +76,7 @@ function handleSearchFormSubmit(event) {
     searchApi1(searchInputVal);
 }
     
-    searchFormEl.addEventListener('submit', handleSearchFormSubmit); 
+searchButton.addEventListener('submit', handleSearchFormSubmit); 
 
 
 //////////////// API call for 5 day forecast
