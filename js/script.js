@@ -1,7 +1,7 @@
 
 // logic getting city 5 day weather & outputting request
 var resultContainer = document.querySelector('#city-result'); //same as line 7 & 8
-var searchFormEl = document.querySelector('#search-form');
+var searchButton = document.querySelector('#search-form-1');
 
 
 // var query = searchParamsArr[0].split('=').pop(); // user input
@@ -20,7 +20,7 @@ var searchFormEl = document.querySelector('#search-form');
 //   searchApi(query);
 // }
 
-function printResults(data) {
+function printResults1(data) {
   console.log(data);  //example resultObj / resultObj.title/date/url/ = data (may want to rename as dataObj)
 
   const date = new Date();
@@ -84,7 +84,7 @@ function searchApi(query) {
     .then(function (data) { //what is locRes
       // resultTextEl.textContent = data.search.query; //what is .search
       console.log(data);
-      printResults(data);
+      printResults1(data);
     })
 
   //     if(!data.results.length) {
@@ -116,7 +116,7 @@ function searchApi(query) {
     searchApi(searchInputVal);
   }
 
-  searchFormEl.addEventListener('submit', handleSearchFormSubmit); 
+  searchButton.addEventListener('click', handleSearchFormSubmit); 
 
   // getParams();
 
