@@ -16,6 +16,11 @@ section {
     display: flex;
   }
 
+.card {
+  background-color: white;
+  border: 1px solid black;
+}
+
 input[type=text], select {
     width: 100%;
     padding: 6px 10px;
@@ -24,7 +29,8 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
   }
   
   input[type=button] {
@@ -47,7 +53,7 @@ input[type=text], select {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 5px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 10px;
 
   }
@@ -56,23 +62,41 @@ input[type=text], select {
     font-size: 10px;
     border: 1px solid black;
     border-radius: 4px;
+    display: flex;
+    background-color: white;
   }
 
 p {
     font-size: 10px;
 }
 
+.current {
+  height: 200px;
+  width: 250px;
+  /* margin-top: 50px; */
+  text-align: left;
+  /* border: 1px solid red; */
+  background-color: white;
+}
 
 .five-day-forecast {
   display: flex;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   justify-content: space-evenly;
   gap: 20px;
+  background-color: white;
 }
 
 .daily {
-  height: 150px;
-  width: 200px;
-margin-top: 50px;
-text-align: left;
+  height: 175px;
+  width: 250px;
+  /* margin-top: 50px; */
+  text-align: left;
+  /* border: 1px solid red; */
+  color: white;
+  background-color: #1974d2;
 }
+
+/* .card {
+  border: 1px solid orange;
+} */
