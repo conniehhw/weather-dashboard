@@ -1,35 +1,20 @@
-
-// logic getting city 5 day weather & outputting request
-var resultContainer = document.querySelector('#city-result'); //same as line 7 & 8
+// logic getting current weather
+var resultContainer = document.querySelector('#current'); //same as line 7 & 8
 var searchFormEl = document.querySelector('#search-form-1');
-
-
-// var query = searchParamsArr[0].split('=').pop(); // user input
-
-// function getParams() {
-//   // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
-//   // var searchParamsArr = document.location.search.split('&'); //pull the items out of the search link
-
-//   //www.facebook.com/profile?test
-
-//   // .pop gets rids of the index
-
-//   // Get the query and format values
-//   // var query = searchParamsArr[0].split('=').pop();
-
-//   searchApi(query);
-// }
 
 function printResults1(data) {
   console.log(data);  //example resultObj / resultObj.title/date/url/ = data (may want to rename as dataObj)
 
-  const date = new Date();
+  var date = new Date();
     let day = date.getDate();
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
 
-    let currentDate = `${day}/${month}/${year}`;
+    let currentDate = `${month}/${day}/${year}`;
     console.log(currentDate);
+
+    date.setDate(date.getDate()+1);
+    console.log(date);
 
     // cityName.textContent = data[0].name;
     //   resultContainer.append(cityName, currentDate);
@@ -64,14 +49,7 @@ var ApiKey = '7fc2024deafd92ac68f08be8696f17ae';
 
 // Call current weather data API
 function searchApi(query) {
-  locQueryUrl = 'https://api.openweathermap.org/data/2.5/weather?' + '&q=' + query + '&appid=' + ApiKey; //ln 63 ifstatement js
-
-  // http://api.openweathermap.org/geo/1.0/direct
-
-// 'https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&cnt=3&appid=dbc89065a7085f3e04b8795339fe050e&units=imperial';
-
-// 'https://api.openweathermap.org/data/2.5/forecast?lat=&lon&appid=dbc89065a7085f3e04b8795339fe050e&units=imperial';
-
+  locQueryUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=&lon=' + '&q=' + query + '&appid=' + ApiKey; //ln 63 ifstatement js
 
   fetch(locQueryUrl)
     .then(function (response) {
@@ -118,17 +96,8 @@ function searchApi(query) {
 
   searchFormEl.addEventListener('submit', handleSearchFormSubmit); 
 
-  // getParams();
 
-//////////////////////////////////////////// test above
 
-// var APIKey = "dbc89065a7085f3e04b8795339fe050e";
-// var searchButton = document.getElementById('search-button');
 
-// var requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?'; API broad
- 
-
-// var resultContainer = document.getElementById('city-result'); //display query results
-// var searchButton = document.getElementById('search-button'); //search button for click
 
 
