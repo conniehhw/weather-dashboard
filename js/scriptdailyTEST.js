@@ -98,7 +98,7 @@ var ApiKey = '7fc2024deafd92ac68f08be8696f17ae';
 
 // Call daily weather data API
 function searchApi1(query) {
-    loc5DayQueryURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=&lon=' + '&q=' + query + '&appid=' + ApiKey;
+    loc5DayQueryURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=&lon=' + '&q=' + query + '&appid=' + ApiKey + '&units=imperial';
 // &units=imperial';
 
     fetch(loc5DayQueryURL)

@@ -49,7 +49,7 @@ var ApiKey = '7fc2024deafd92ac68f08be8696f17ae';
 
 // Call current weather data API
 function searchApi(query) {
-  locQueryUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=&lon=' + '&q=' + query + '&appid=' + ApiKey; //ln 63 ifstatement js
+  locQueryUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=&lon=' + '&q=' + query + '&appid=' + ApiKey + '&units=imperial'; //ln 63 ifstatement js
 
   fetch(locQueryUrl)
     .then(function (response) {
