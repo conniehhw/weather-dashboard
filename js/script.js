@@ -43,6 +43,14 @@ function printResults1(data) {
       resultContainer.append(tempContentEl);
       resultContainer.append(windContentEl);
       resultContainer.append(humidityContentEl);
+
+      var myObj = data;
+      //Put object into storage
+      localStorage.setItem('cityName', JSON.stringify(myObj)); //--> how to convert
+
+      //Retrieve object from storage
+      var getObj = JSON.parse(localStorage.getItem('cityName')); //--> move this to appendButton
+      console.log(getObj);
 }
 
 var ApiKey = '7fc2024deafd92ac68f08be8696f17ae';
@@ -92,12 +100,10 @@ function searchApi(query) {
     }
   
     searchApi(searchInputVal);
-  }
+  };
 
   searchFormEl.addEventListener('submit', handleSearchFormSubmit); 
 
+  
 
-
-
-
-
+  

@@ -11,12 +11,12 @@ function handleSearchFormSubmit(event) {
       return;
     }
     console.log(searchInputVal);
-    
+
     var myDiv = document.getElementById("GFG");
     var button = document.createElement('BUTTON');
     var text = document.createTextNode(searchInputVal);
     button.appendChild(text);
-    myDiv.appendChild(button);   
+    myDiv.appendChild(button);
   }
 
 //   function addButton (event) {
