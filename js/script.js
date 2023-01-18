@@ -13,8 +13,7 @@ function printResults1(data) {
     let currentDate = `${month}/${day}/${year}`;
     console.log(currentDate);
 
-    date.setDate(date.getDate()+1);
-    console.log(date);
+    date.setDate(date.getDate()+1); // getting the 
 
     // cityName.textContent = data[0].name;
     //   resultContainer.append(cityName, currentDate);
@@ -44,12 +43,13 @@ function printResults1(data) {
       resultContainer.append(windContentEl);
       resultContainer.append(humidityContentEl);
 
+      var searchInputVal = document.querySelector('#search-input').value;
       var myObj = data;
       //Put object into storage
-      localStorage.setItem('cityName', JSON.stringify(myObj)); //--> how to convert
+      localStorage.setItem(searchInputVal, JSON.stringify(myObj)); //--> how to convert
 
       //Retrieve object from storage
-      var getObj = JSON.parse(localStorage.getItem('cityName')); //--> move this to appendButton
+      var getObj = JSON.parse(localStorage.getItem(searchInputVal)); //--> move this to appendButton
       console.log(getObj);
 }
 
@@ -100,6 +100,7 @@ function searchApi(query) {
     }
   
     searchApi(searchInputVal);
+    console.log(searchInputVal);
   };
 
   searchFormEl.addEventListener('submit', handleSearchFormSubmit); 
