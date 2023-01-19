@@ -22,7 +22,9 @@ function printResults(data) {
 
   // Create Current Weather Result Container
   var cityName = document.createElement('h1');
-      cityName.textContent = data.name;
+      cityName.textContent = data.name + ' ' + data.weather[0].icon; // need to link with icon folder
+        console.log(data.weather[0].icon);
+
   var tempContentEl = document.createElement('p');
       tempContentEl.innerHTML = '<strong>Temp:</strong> ' + data.main.temp + ' F/C';
   var windContentEl = document.createElement('p');
@@ -38,7 +40,7 @@ function printResults(data) {
 function printResults1(data) {
     // Create 5 day weather result daily containers
   var day1El = document.createElement('h5');
-      day1El.textContent = data.list[8].dt_txt;
+      day1El.textContent = data.list[8].dt_txt + ' ' + data.list[8].weather[0].icon;
   var tempForecastEl = document.createElement('p');
       tempForecastEl.innerHTML = '<strong>Temp:</strong> ' + data.list[8].main.temp + ' F/C';  
   var windForecastEl = document.createElement('p');
@@ -47,7 +49,7 @@ function printResults1(data) {
       humidityForecastEl.innerHTML = '<strong>Humidity:</strong> ' + data.list[8].main.humidity + ' %';
 
   var day2El = document.createElement('h5');
-      day2El.textContent = data.list[16].dt_txt;
+      day2El.textContent = data.list[16].dt_txt  + ' ' + data.list[16].weather[0].icon;
   var tempForecastEl2 = document.createElement('p');
       tempForecastEl2.innerHTML = '<strong>Temp:</strong> ' + data.list[16].main.temp + ' F/C';  
   var windForecastEl2 = document.createElement('p');
@@ -56,7 +58,7 @@ function printResults1(data) {
       humidityForecastEl2.innerHTML = '<strong>Humidity:</strong> ' + data.list[16].main.humidity + ' %';
 
   var day3El = document.createElement('h5');
-      day3El.textContent = data.list[24].dt_txt;
+      day3El.textContent = data.list[24].dt_txt  + ' ' + data.list[24].weather[0].icon;
   var tempForecastEl3 = document.createElement('p');
       tempForecastEl3.innerHTML = '<strong>Temp:</strong> ' + data.list[24].main.temp + ' F/C';  
   var windForecastEl3 = document.createElement('p');
@@ -65,7 +67,7 @@ function printResults1(data) {
       humidityForecastEl3.innerHTML = '<strong>Humidity:</strong> ' + data.list[24].main.humidity + ' %';
 
   var day4El = document.createElement('h5');
-      day4El.textContent = data.list[32].dt_txt;
+      day4El.textContent = data.list[32].dt_txt  + ' ' + data.list[32].weather[0].icon;
   var tempForecastEl4 = document.createElement('p');
       tempForecastEl4.innerHTML = '<strong>Temp:</strong> ' + data.list[32].main.temp + ' F/C';  
   var windForecastEl4 = document.createElement('p');
@@ -74,7 +76,7 @@ function printResults1(data) {
       humidityForecastEl4.innerHTML = '<strong>Humidity:</strong> ' + data.list[32].main.humidity + ' %';    
 
   var day5El = document.createElement('h5');
-      day5El.textContent = data.list[39].dt_txt;
+      day5El.textContent = data.list[39].dt_txt  + ' ' + data.list[39].weather[0].icon;
   var tempForecastEl5 = document.createElement('p');
       tempForecastEl5.innerHTML = '<strong>Temp:</strong> ' + data.list[39].main.temp + ' F/C';  
   var windForecastEl5 = document.createElement('p');
