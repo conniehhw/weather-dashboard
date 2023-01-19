@@ -16,7 +16,7 @@ function printResults(data) {
   let year = date.getFullYear(); 
 
   let currentDate = `${month}/${day}/${year}`;
-  console.log(currentDate);
+  console.log(currentDate); // incorrect - this is currentTime local timezone - should fetch from API instead, too long to reformat
 
   date.setDate(date.getDate()+1); // what is this for anymore?
 
@@ -34,7 +34,7 @@ function printResults(data) {
 }
 
 
-////// Prints results from 5 day weather API
+////// Prints results from 5 day weather API - NOTE: This should really be a for loop instead with i 
 function printResults1(data) {
     // Create 5 day weather result daily containers
   var day1El = document.createElement('h5');
