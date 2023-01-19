@@ -72,6 +72,7 @@ function searchApi(query) {
       console.log(data);
       printResults1(data);
     })
+  
 
       .catch(function (error) {
         console.error(error);
@@ -108,10 +109,12 @@ function createHistoryBtn () {
     var getObj = JSON.parse(localStorage.getItem(searchInputVal)); //--> move this to appendButton
       console.log(getObj);
     }
-
     button.addEventListener('click', handleHistoryBtn);
 };
 
-  searchFormEl.addEventListener('submit', handleSearchFormSubmit); 
+searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 
-  
+$("button").click(function() {
+  $("#current").empty();
+  printResults1();
+});
