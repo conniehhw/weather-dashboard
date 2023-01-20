@@ -18,6 +18,7 @@ section {
 
 .card {
   background-color: white;
+  width: 20%;
   /* border: 1px solid black; */
 }
 
@@ -64,6 +65,19 @@ input[type=text], select {
     border-radius: 4px;
     display: flex;
     background-color: white;
+    width: 80%;
+  }
+
+  @media screen and (max-width: 800px) {
+    .card, .card-city-result, .five-day-forecast, header {
+      width:100%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .daily {
+      width:100%;
+    }
   }
 
 p {
@@ -85,17 +99,20 @@ p {
   justify-content: space-evenly;
   gap: 20px;
   background-color: white;
-  
+  width: 100%;
+
 }
 
 .daily {
   height: 175px;
-  width: 250px;
+  /* width: 250px; */
+  width: 100%;
   /* margin-top: 50px; */
   text-align: left;
   /* border: 1px solid red; */
   color: white;
   background-color: #045FB4;
+
 }
 
 
