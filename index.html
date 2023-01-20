@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tangsa&display=swap" rel="stylesheet"
-    rel="stylesheet" /> -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,11 +14,13 @@
         <section>
             <div class="card" style="width: 12rem;">
             <div class="card-body">
-            <form id="search-form-1" action="/action_page.php">
+            <form id="search-form-1">
+                 <!-- action="/action_page.php"> -->
                 <label for="sCity">Search for a City:</label><br>
                 <input id="search-input" class="form-input w-100" type="text" placeholder="City Name!">
                 <button class="btn btn-info btn-block">Search</button>    
             </form>
+
             </div>
             </div>
             <div class="card-city-result" id="city-result" style="width: 42rem;">
@@ -27,26 +28,23 @@
         </section>
 
         <section>
-            <div class="history" id="search-history" style="width: 12rem;">
-                <div id="GFG"></div>
-            </div>
+        
             
-            <div class="five-day-forecast" id="forecast" style="width: 40rem;">
+            <div class="five-day-forecast" id="forecast" style="width: 55rem;">
+                5 Day Forecast
                 <div class="daily" id="daily1"></div>
                 <div class="daily" id="daily2"></div>
                 <div class="daily" id="daily3"></div>
                 <div class="daily" id="daily4"></div>
                 <div class="daily" id="daily5"></div>
-        <!-- <ul class="col-8 mb-3"></ul> -->
+
             </div>
     
         </section>
 
-<!-- <script src="./js/script.js"></script> -->
-<!-- <script src="./js/scriptcity.js"></script> -->
-<!-- <script src="./js/scriptdaily.js"></script> -->
-<script src="./js/scriptdailyTEST.js"></script>
-<script src="./js/scriptButton.js"></script>
+<script src="./Assets/js/script.js"></script>
+
+<!-- <script src="./js/PromiseFetchTest.js"></script> -->
 
 </body>
 </html>

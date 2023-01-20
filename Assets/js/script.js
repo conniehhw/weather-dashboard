@@ -26,7 +26,7 @@ function printResults(data) {
         console.log(data.weather[0].icon);
 
   var tempContentEl = document.createElement('p');
-      tempContentEl.innerHTML = '<strong>Temp:</strong> ' + data.main.temp + ' F/C';
+      tempContentEl.innerHTML = '<strong>Temp:</strong> ' + data.main.temp + ' °C';
   var windContentEl = document.createElement('p');
       windContentEl.innerHTML = '<strong>Wind:</strong> ' + data.wind.speed + ' MPH';
   var humidityContentEl = document.createElement('p');
@@ -42,7 +42,7 @@ function printResults1(data) {
   var day1El = document.createElement('h5');
       day1El.textContent = data.list[8].dt_txt + ' ' + data.list[8].weather[0].icon;
   var tempForecastEl = document.createElement('p');
-      tempForecastEl.innerHTML = '<strong>Temp:</strong> ' + data.list[8].main.temp + ' F/C';  
+      tempForecastEl.innerHTML = '<strong>Temp:</strong> ' + data.list[8].main.temp + ' °C';  
   var windForecastEl = document.createElement('p');
       windForecastEl.innerHTML = '<strong>Wind:</strong> ' + data.list[8].wind.speed + ' MPH';  
   var humidityForecastEl = document.createElement('p');
@@ -51,7 +51,7 @@ function printResults1(data) {
   var day2El = document.createElement('h5');
       day2El.textContent = data.list[16].dt_txt  + ' ' + data.list[16].weather[0].icon;
   var tempForecastEl2 = document.createElement('p');
-      tempForecastEl2.innerHTML = '<strong>Temp:</strong> ' + data.list[16].main.temp + ' F/C';  
+      tempForecastEl2.innerHTML = '<strong>Temp:</strong> ' + data.list[16].main.temp + ' °C';  
   var windForecastEl2 = document.createElement('p');
       windForecastEl2.innerHTML = '<strong>Wind:</strong> ' + data.list[16].wind.speed + ' MPH';  
   var humidityForecastEl2 = document.createElement('p');
@@ -60,7 +60,7 @@ function printResults1(data) {
   var day3El = document.createElement('h5');
       day3El.textContent = data.list[24].dt_txt  + ' ' + data.list[24].weather[0].icon;
   var tempForecastEl3 = document.createElement('p');
-      tempForecastEl3.innerHTML = '<strong>Temp:</strong> ' + data.list[24].main.temp + ' F/C';  
+      tempForecastEl3.innerHTML = '<strong>Temp:</strong> ' + data.list[24].main.temp + ' °C';  
   var windForecastEl3 = document.createElement('p');
       windForecastEl3.innerHTML = '<strong>Wind:</strong> ' + data.list[24].wind.speed + ' MPH';  
   var humidityForecastEl3 = document.createElement('p');
@@ -69,7 +69,7 @@ function printResults1(data) {
   var day4El = document.createElement('h5');
       day4El.textContent = data.list[32].dt_txt  + ' ' + data.list[32].weather[0].icon;
   var tempForecastEl4 = document.createElement('p');
-      tempForecastEl4.innerHTML = '<strong>Temp:</strong> ' + data.list[32].main.temp + ' F/C';  
+      tempForecastEl4.innerHTML = '<strong>Temp:</strong> ' + data.list[32].main.temp + ' °C';  
   var windForecastEl4 = document.createElement('p');
       windForecastEl4.innerHTML = '<strong>Wind:</strong> ' + data.list[32].wind.speed + ' MPH';  
   var humidityForecastEl4 = document.createElement('p');
@@ -78,7 +78,7 @@ function printResults1(data) {
   var day5El = document.createElement('h5');
       day5El.textContent = data.list[39].dt_txt  + ' ' + data.list[39].weather[0].icon;
   var tempForecastEl5 = document.createElement('p');
-      tempForecastEl5.innerHTML = '<strong>Temp:</strong> ' + data.list[39].main.temp + ' F/C';  
+      tempForecastEl5.innerHTML = '<strong>Temp:</strong> ' + data.list[39].main.temp + ' °C';  
   var windForecastEl5 = document.createElement('p');
       windForecastEl5.innerHTML = '<strong>Wind:</strong> ' + data.list[39].wind.speed + ' MPH';  
   var humidityForecastEl5 = document.createElement('p');
@@ -102,7 +102,7 @@ var ApiKey = '7fc2024deafd92ac68f08be8696f17ae';
 
 // Call current weather data API
 function searchApi(query) {
-  locQueryUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=&lon=' + '&q=' + query + '&appid=' + ApiKey + '&units=imperial'; //ln 63 ifstatement js
+  locQueryUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=&lon=' + '&q=' + query + '&appid=' + ApiKey + '&units=metric'; //ln 63 ifstatement js
 
 
   fetch(locQueryUrl)
@@ -128,7 +128,7 @@ function searchApi(query) {
 
     // Call 5-daily weather data API
     function searchApi1(query) {
-        loc5DayQueryURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=&lon=' + '&q=' + query + '&appid=' + ApiKey + '&units=imperial';
+        loc5DayQueryURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=&lon=' + '&q=' + query + '&appid=' + ApiKey + '&units=metric';
     
         fetch(loc5DayQueryURL)
         .then(function (response) {
