@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-[link to live site]( https://conniehhw.github.io/weather-dashboard/) --> make site responsive
+Link to live site: [https://conniehhw.github.io/weather-dashboard/](https://conniehhw.github.io/weather-dashboard/) 
 
 ## Description
 
@@ -10,13 +10,13 @@ Upon searching for a city, users are presented with current and future condition
 
 ## Installation
 
-This app runs in the browser and feature dynamically updated HTML and CSS. The weather data is accessed from the Open Weather Organization APIs. [link to live site](https://openweathermap.org/api) and uses the browsers localStorage to store city queries.
+This app runs in the browser and feature dynamically updated HTML and CSS. The weather data is accessed from the Open Weather Organization APIs [https://openweathermap.org/api] (https://openweathermap.org/api) and uses the browsers localStorage to store city queries.
 
 ## Preview & Usage
 
 1. Navigate to the webpage.
 2. In the input form, type in the city you wish to query and click on the search button.
-3. The city's current and five day weather forecast data is retrieved from the Open Weather Map Org APIs [link to live site](https://openweathermap.org/api) and displayed in its box. 
+3. The city's current and five day weather forecast data is retrieved from the Open Weather Map Org APIs [https://openweathermap.org/api](https://openweathermap.org/api) and displayed in its box. 
 4. Upon clicking the search button, a new button labelled with the city name is also created on the bottom of the page.
 5. When you click on any of those buttons, it will retreive that city's weather and forecast.
 
